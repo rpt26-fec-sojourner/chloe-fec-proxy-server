@@ -11,6 +11,16 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(publicPath));
 
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
+
+app.get('/:listing_id', (req, res) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.sendFile(path.join(publicPath, 'index.html'));
+});
+
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
