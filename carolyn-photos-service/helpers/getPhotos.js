@@ -10,7 +10,6 @@ mongoose.connect('mongodb://127.0.0.1:27017/fec', {
 const db = mongoose.connection;
 
 const getPhotos = (id) => {
-  console.log('db helper id: ', id);
   return PhotoGallery.findOne({ listingId: id });
 };
 

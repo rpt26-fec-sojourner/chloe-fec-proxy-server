@@ -26,7 +26,6 @@ class PhotoGallery extends React.Component {
   }
 
   getPhotos(id) {
-    // axios.get(`/${id}/photos`)
     axios.get(`http://localhost:3000/${id}/photos`)
       .then((response) => {
         // console.log(response.data);
