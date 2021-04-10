@@ -26,3 +26,5 @@ dist/
 
 Dockerfile
 .dockerignore
+*.pem
+login.sh
